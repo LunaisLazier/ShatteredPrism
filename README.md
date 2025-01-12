@@ -36,6 +36,24 @@ All launcher code is available under the GPL-3.0-only license.
 
 The logo and related assets are under the CC BY-NC-SA 4.0 license.
 
+#### macOS (Manual)
+
+There are builds for macOS in the [releases section](https://github.com/lunaislazier/ShatteredPrism/releases/latest).
+
+### Nix
+
+This repository contains a Nix flake:
+
+```Shell
+nix run github:lunaislazier/ShatteredPrism
+```
+
+See [nix/README.md](nix/README.md) for details.
+
+### Other Linux
+
+AppImages are available in the [releases section](https://github.com/lunaislazier/ShatteredPrism/releases/latest).
+
 ## Building
 
 To build the launcher yourself, follow the instructions on the Prism Launcher website, but clone this repo instead:
