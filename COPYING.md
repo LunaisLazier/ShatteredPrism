@@ -1,7 +1,7 @@
 ## Shattered Prism
 
      Shattered Prism - Minecraft Launcher
-     Copyright (C) 2024-2024 Shattered Prism Contributors
+     Copyright (C) 2024-2025 Shattered Prism Contributors
 
      This program is free software: you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -35,7 +35,7 @@
 ## Fjord Launcher
 
      Fjord Launcher - Minecraft Launcher
-     Copyright (C) 2024-2024 Fjord Launcher Contributors
+     Copyright (C) 2024-2025 Fjord Launcher Contributors
 
      This program is free software: you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -103,7 +103,7 @@
 ## Prism Launcher
 
      Prism Launcher - Minecraft Launcher
-     Copyright (C) 2022-2024 Prism Launcher Contributors
+     Copyright (C) 2022-2025 Prism Launcher Contributors
 
      This program is free software: you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
