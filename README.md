@@ -8,7 +8,7 @@
 
 <p align="center">
   Shattered Prism is a custom launcher for Minecraft that allows you to easily manage multiple installations of Minecraft at once.<br />
-  <br />This is a <b>fork</b> of PrismLauncher and is <b>not</b> endorsed by it.
+  <br />This was initally a <b>fork</b> of PrismLauncher and is <b>not</b> endorsed by any of the projects it currently stems from.
 </p>
 
 # Why does this exist?
