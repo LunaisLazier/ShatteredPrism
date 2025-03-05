@@ -8,10 +8,13 @@
 
 <p align="center">
   Shattered Prism is a custom launcher for Minecraft that allows you to easily manage multiple installations of Minecraft at once.<br />
-  <br />This was initally a <b>fork</b> of PrismLauncher and is <b>not</b> endorsed by any of the projects it currently stems from.
+  <br />This is a <b>fork</b> of FjordLauncher and is <b>not</b> endorsed by it or Prism.
 </p>
 
-# Why does this exist?
+## Why does this exist?
+
+This project was originally a direct fork of upstream Prism, but spent most of it's time as a small group-oriented continuation of fn2006's PollyMC, except with continued support for Microsoft authentication and being without branding that would get it confused for a uh... *similarly named project*. Luckily though, [@evan-goode](https://github.com/evan-goode) eventually created Fjord and this project has been based upon it ever since!
+## Differences from PrismLauncher
 
 - Fully removed PrismLauncher's DRM.
 - Restores the ability to download modpacks from FTB.
@@ -25,10 +28,11 @@
 
 ## Community & Support
 
-Feel free to create a GitHub issue if you find a bug or want to suggest something, it is currently the **only** way to contact anyone regarding this project.
+Feel free to create a GitHub issue if you find a bug or want to suggest something.
 
-Do **not** ask for support on any of the official PrismLauncher channels as they cannot be held responsible for any issues caused by the changes made.
+For any other project-related inquiries, reach me at either my [Bluesky](https://bsky.app/profile/moonlitvtuber.org) or [Twitter](https://twitter.com/lunasc_ope).
 
+Do **not** ask for support on any of the official PrismLauncher channels, please refer to the FjordLauncher ones **only** if the issue is shared between these two projects.
 
 ## License [![https://github.com/PrismLauncher/PrismLauncher/blob/develop/LICENSE](https://img.shields.io/github/license/PrismLauncher/PrismLauncher?label=License&logo=gnu&color=C4282D)](LICENSE)
 
