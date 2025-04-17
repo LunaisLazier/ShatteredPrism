@@ -42,12 +42,7 @@ The logo and related assets are under the CC BY-NC-SA 4.0 license.
 
 ## Building
 
-To build the launcher yourself, follow the instructions on the Prism Launcher website, but clone this repo instead:
-
-- [Windows](https://prismlauncher.org/wiki/development/build-instructions/windows/)
-- [Linux](https://prismlauncher.org/wiki/development/build-instructions/linux/)
-- [MacOS](https://prismlauncher.org/wiki/development/build-instructions/macos/)
-- [OpenBSD](https://prismlauncher.org/wiki/development/build-instructions/openbsd/)
+See [BUILDING.md](BUILDING.md)
 
 ## Notes
 
