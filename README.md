@@ -4,7 +4,8 @@
 
   
 </p>
-## **HEAVILY IN THE WORKS!!!!!!!!!!!!!!!!! BUGS SHOULD BE EXPECTED**
+
+## HEAVILY IN THE WORKS!!!!!!!!!!!!!!!!! BUGS SHOULD BE EXPECTED
 
 ## Community & Support
 
