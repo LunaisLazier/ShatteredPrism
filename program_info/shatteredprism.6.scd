@@ -69,11 +69,11 @@ variables, besides other common Qt variables:
 
 # BUGS
 
-https://github.com/lunaislazier/ShatteredPrism/issues
+https://github.com/qEniuu/FracturedPrism/issues
 
 # RESOURCES
 
-GitHub: https://github.com/lunaislazier/ShatteredPrism
+GitHub: https://github.com/qEniuu/FracturedPrism
 
 # AUTHORS
 
@@ -81,10 +81,12 @@ MultiMC Contributors
 
 PolyMC Contributors
 
-PollyMC Contributors
-
 Prism Launcher Contributors
+
+PollyMC Contributors
 
 Fjord Launcher Contributors
 
 Shattered Prism Contributors
+
+Fractured Prism Contributors

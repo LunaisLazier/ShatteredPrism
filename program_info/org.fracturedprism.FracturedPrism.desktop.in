@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=@Launcher_DisplayName@
+Comment=Discover, manage, and play Minecraft instances
+Type=Application
+Terminal=false
+Exec=@Launcher_APP_BINARY_NAME@ %U
+StartupNotify=true
+Icon=org.fracturedPrism.FracturedPrism.svg
+Categories=Game;ActionGame;AdventureGame;Simulation;
+Keywords=game;minecraft;mc;
+StartupWMClass=@Launcher_CommonName@
+MimeType=application/zip;application/x-modrinth-modpack+zip;x-scheme-handler/curseforge;x-scheme-handler/@Launcher_APP_BINARY_NAME@;
