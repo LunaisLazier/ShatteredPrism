@@ -17,7 +17,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Add Microsoft account&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Add an account&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="textFormat">
       <enum>Qt::RichText</enum>
@@ -30,7 +30,7 @@
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>In order to play Minecraft, you must have at least one Microsoft account logged in. Do you want to log in now?</string>
+      <string>In order to play Minecraft, you must have at least one account added. Do you want to add an account now?</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -45,9 +45,23 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="MSAButton">
      <property name="text">
       <string>Add Microsoft account</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="authlibButton">
+     <property name="text">
+      <string>Add authlib-injector account</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="offlineButton">
+     <property name="text">
+      <string>Add Offline account</string>
      </property>
     </widget>
    </item>

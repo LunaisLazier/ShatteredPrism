@@ -17,7 +17,9 @@ class LoginWizardPage : public BaseWizardPage {
     bool validatePage() override;
     void retranslate() override;
    private slots:
-    void on_pushButton_clicked();
+    void on_MSAButton_clicked();
+    void on_authlibButton_clicked();
+    void on_offlineButton_clicked();
 
    private:
     Ui::LoginWizardPage* ui;
