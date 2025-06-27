@@ -34,6 +34,9 @@ class OfflineLoginDialog : public QDialog {
     void on_userTextBox_textEdited(const QString& newText);
     void on_allowLongUsernames_stateChanged(int value);
 
+   private slots:
+    void on_randomUser_clicked();
+
    private:
     Ui::OfflineLoginDialog* ui;
     MinecraftAccountPtr m_account;
