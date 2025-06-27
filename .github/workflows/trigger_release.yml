@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: "true"
-          path: "ShatteredPrism-source"
+          path: "FracturedPrism-source"
       - name: Download artifacts
         uses: actions/download-artifact@v4
       - name: Grab and store version
@@ -45,38 +45,38 @@ jobs:
           echo "VERSION=$tag_name" >> $GITHUB_ENV
       - name: Package artifacts properly
         run: |
-          mv ${{ github.workspace }}/ShatteredPrism-source ShatteredPrism-${{ env.VERSION }}
-          mv ShatteredPrism-Linux-Qt6-Portable*/ShatteredPrism-portable.tar.gz ShatteredPrism-Linux-Qt6-Portable-${{ env.VERSION }}.tar.gz
-          mv ShatteredPrism-Linux-Qt5-Portable*/ShatteredPrism-portable.tar.gz ShatteredPrism-Linux-Qt5-Portable-${{ env.VERSION }}.tar.gz
-          mv ShatteredPrism-*.AppImage/ShatteredPrism-*.AppImage ShatteredPrism-Linux-x86_64.AppImage
-          mv ShatteredPrism-*.AppImage.zsync/ShatteredPrism-*.AppImage.zsync ShatteredPrism-Linux-x86_64.AppImage.zsync
-          mv ShatteredPrism-macOS-Legacy*/ShatteredPrism.zip ShatteredPrism-macOS-Legacy-${{ env.VERSION }}.zip
-          mv ShatteredPrism-macOS*/ShatteredPrism.zip ShatteredPrism-macOS-${{ env.VERSION }}.zip
+          mv ${{ github.workspace }}/FracturedPrism-source FracturedPrism-${{ env.VERSION }}
+          mv FracturedPrism-Linux-Qt6-Portable*/FracturedPrism-portable.tar.gz FracturedPrism-Linux-Qt6-Portable-${{ env.VERSION }}.tar.gz
+          mv FracturedPrism-Linux-Qt5-Portable*/FracturedPrism-portable.tar.gz FracturedPrism-Linux-Qt5-Portable-${{ env.VERSION }}.tar.gz
+          mv FracturedPrism-*.AppImage/FracturedPrism-*.AppImage FracturedPrism-Linux-x86_64.AppImage
+          mv FracturedPrism-*.AppImage.zsync/FracturedPrism-*.AppImage.zsync FracturedPrism-Linux-x86_64.AppImage.zsync
+          mv FracturedPrism-macOS-Legacy*/FracturedPrism.zip FracturedPrism-macOS-Legacy-${{ env.VERSION }}.zip
+          mv FracturedPrism-macOS*/FracturedPrism.zip FracturedPrism-macOS-${{ env.VERSION }}.zip
 
-          tar --exclude='.git' -czf ShatteredPrism-${{ env.VERSION }}.tar.gz ShatteredPrism-${{ env.VERSION }}
+          tar --exclude='.git' -czf FracturedPrism-${{ env.VERSION }}.tar.gz FracturedPrism-${{ env.VERSION }}
 
-          for d in ShatteredPrism-Windows-MSVC*; do
+          for d in FracturedPrism-Windows-MSVC*; do
             cd "${d}" || continue
             LEGACY="$(echo -n ${d} | grep -o Legacy || true)"
             ARM64="$(echo -n ${d} | grep -o arm64 || true)"
             INST="$(echo -n ${d} | grep -o Setup || true)"
             PORT="$(echo -n ${d} | grep -o Portable || true)"
-            NAME="ShatteredPrism-Windows-MSVC"
+            NAME="FracturedPrism-Windows-MSVC"
             test -z "${LEGACY}" || NAME="${NAME}-Legacy"
             test -z "${ARM64}" || NAME="${NAME}-arm64"
             test -z "${PORT}" || NAME="${NAME}-Portable"
-            test -z "${INST}" || mv ShatteredPrism-*.exe ../${NAME}-Setup-${{ env.VERSION }}.exe
+            test -z "${INST}" || mv FracturedPrism-*.exe ../${NAME}-Setup-${{ env.VERSION }}.exe
             test -n "${INST}" || zip -r -9 "../${NAME}-${{ env.VERSION }}.zip" *
             cd ..
           done
 
-          for d in ShatteredPrism-Windows-MinGW-w64*; do
+          for d in FracturedPrism-Windows-MinGW-w64*; do
             cd "${d}" || continue
             INST="$(echo -n ${d} | grep -o Setup || true)"
             PORT="$(echo -n ${d} | grep -o Portable || true)"
-            NAME="ShatteredPrism-Windows-MinGW-w64"
+            NAME="FracturedPrism-Windows-MinGW-w64"
             test -z "${PORT}" || NAME="${NAME}-Portable"
-            test -z "${INST}" || mv ShatteredPrism-*.exe ../${NAME}-Setup-${{ env.VERSION }}.exe
+            test -z "${INST}" || mv FracturedPrism-*.exe ../${NAME}-Setup-${{ env.VERSION }}.exe
             test -n "${INST}" || zip -r -9 "../${NAME}-${{ env.VERSION }}.zip" *
             cd ..
           done
@@ -87,23 +87,23 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: ${{ github.ref }}
-          name: Shattered Prism ${{ env.VERSION }}
+          name: Fractured Prism ${{ env.VERSION }}
           draft: true
           prerelease: false
           files: |
-            ShatteredPrism-Linux-Qt5-Portable-${{ env.VERSION }}.tar.gz
-            ShatteredPrism-Linux-x86_64.AppImage
-            ShatteredPrism-Linux-x86_64.AppImage.zsync
-            ShatteredPrism-Linux-Qt6-Portable-${{ env.VERSION }}.tar.gz
-            ShatteredPrism-Windows-MinGW-w64-${{ env.VERSION }}.zip
-            ShatteredPrism-Windows-MinGW-w64-Portable-${{ env.VERSION }}.zip
-            ShatteredPrism-Windows-MinGW-w64-Setup-${{ env.VERSION }}.exe
-            ShatteredPrism-Windows-MSVC-arm64-${{ env.VERSION }}.zip
-            ShatteredPrism-Windows-MSVC-arm64-Portable-${{ env.VERSION }}.zip
-            ShatteredPrism-Windows-MSVC-arm64-Setup-${{ env.VERSION }}.exe
-            ShatteredPrism-Windows-MSVC-${{ env.VERSION }}.zip
-            ShatteredPrism-Windows-MSVC-Portable-${{ env.VERSION }}.zip
-            ShatteredPrism-Windows-MSVC-Setup-${{ env.VERSION }}.exe
-            ShatteredPrism-macOS-${{ env.VERSION }}.zip
-            ShatteredPrism-macOS-Legacy-${{ env.VERSION }}.zip
-            ShatteredPrism-${{ env.VERSION }}.tar.gz
+            FracturedPrism-Linux-Qt5-Portable-${{ env.VERSION }}.tar.gz
+            FracturedPrism-Linux-x86_64.AppImage
+            FracturedPrism-Linux-x86_64.AppImage.zsync
+            FracturedPrism-Linux-Qt6-Portable-${{ env.VERSION }}.tar.gz
+            FracturedPrism-Windows-MinGW-w64-${{ env.VERSION }}.zip
+            FracturedPrism-Windows-MinGW-w64-Portable-${{ env.VERSION }}.zip
+            FracturedPrism-Windows-MinGW-w64-Setup-${{ env.VERSION }}.exe
+            FracturedPrism-Windows-MSVC-arm64-${{ env.VERSION }}.zip
+            FracturedPrism-Windows-MSVC-arm64-Portable-${{ env.VERSION }}.zip
+            FracturedPrism-Windows-MSVC-arm64-Setup-${{ env.VERSION }}.exe
+            FracturedPrism-Windows-MSVC-${{ env.VERSION }}.zip
+            FracturedPrism-Windows-MSVC-Portable-${{ env.VERSION }}.zip
+            FracturedPrism-Windows-MSVC-Setup-${{ env.VERSION }}.exe
+            FracturedPrism-macOS-${{ env.VERSION }}.zip
+            FracturedPrism-macOS-Legacy-${{ env.VERSION }}.zip
+            FracturedPrism-${{ env.VERSION }}.tar.gz

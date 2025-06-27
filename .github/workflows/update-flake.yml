@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   update-flake:
-    if: github.repository == 'lunaislazier/ShatteredPrism'
+    if: github.repository == 'qEniuu/FracturedPrism'
     runs-on: ubuntu-latest
 
     steps:
