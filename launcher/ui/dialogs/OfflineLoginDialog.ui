@@ -54,7 +54,14 @@
     </widget>
    </item>
     <item>
-    <widget class="QPushButton" name="randomUser">
+    <widget class="QPushButton" name="randomCharUser">
+     <property name="text">
+      <string>Random Characters</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="randomFullUser">
      <property name="text">
       <string>Random Username</string>
      </property>
