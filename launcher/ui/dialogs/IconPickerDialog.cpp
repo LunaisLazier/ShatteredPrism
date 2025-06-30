@@ -27,6 +27,7 @@
 #include <DesktopServices.h>
 #include "icons/IconList.h"
 #include "icons/IconUtils.h"
+#include <QRandomGenerator>
 
 IconPickerDialog::IconPickerDialog(QWidget* parent) : QDialog(parent), ui(new Ui::IconPickerDialog)
 {
@@ -76,6 +77,8 @@ IconPickerDialog::IconPickerDialog(QWidget* parent) : QDialog(parent), ui(new Ui
 
     auto buttonFolder = ui->buttonBox->addButton(tr("Open Folder"), QDialogButtonBox::ResetRole);
     connect(buttonFolder, &QPushButton::clicked, this, &IconPickerDialog::openFolder);
+    auto buttonRandom = ui->buttonBox->addButton(tr("Random Icon"), QDialogButtonBox::ResetRole);
+    connect(buttonRandom, &QPushButton::clicked, this, &IconPickerDialog::on_randomIcon_Pushed);
 }
 
 bool IconPickerDialog::eventFilter(QObject* obj, QEvent* evt)
@@ -158,6 +161,21 @@ void IconPickerDialog::delayed_scroll(QModelIndex model_index)
 IconPickerDialog::~IconPickerDialog()
 {
     delete ui;
+}
+
+void IconPickerDialog::on_randomIcon_Pushed()
+{
+    int rowAmount = ui->iconView->model()->rowCount();
+    int randomRowNum = QRandomGenerator::global()->bounded(rowAmount);
+    QModelIndex index = ui->iconView->model()->index(randomRowNum, 0);
+
+    ui->iconView->selectionModel()->select(index, QItemSelectionModel::QItemSelectionModel::Current | QItemSelectionModel::Select);
+    ui->iconView->setCurrentIndex(index);
+    ui->iconView->scrollTo(index);
+
+    selectedIconKey = index.data(Qt::UserRole).toString();
+    buttonRemove->setEnabled(APPLICATION->icons()->iconFileExists(selectedIconKey));
+    
 }
 
 void IconPickerDialog::openFolder()

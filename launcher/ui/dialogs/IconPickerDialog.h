@@ -16,6 +16,7 @@
 #pragma once
 #include <QDialog>
 #include <QItemSelection>
+#include <QtWidgets/QPushButton>
 
 namespace Ui {
 class IconPickerDialog;
@@ -44,4 +45,5 @@ class IconPickerDialog : public QDialog {
     void addNewIcon();
     void removeSelectedIcon();
     void openFolder();
+    void on_randomIcon_Pushed();
 };
