@@ -1,3 +1,7 @@
+## Note: I am currently in the process of moving, and will be living entirely on my own for the first time soon, which is leaving me with little time to maintain the launcher currently, by August I should have my situation figured out and stable, and I'll be able to update to the latest version :)
+
+
+
 <p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="/program_info/shatteredprism-header.svg">
